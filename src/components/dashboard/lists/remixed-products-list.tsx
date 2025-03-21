@@ -25,7 +25,7 @@ export function RemixedProductsList({ products }: RemixedProductsListProps) {
           </Avatar>
 
           <div className="flex flex-col">
-            <h3 className="text-md font-medium text-white">{product.name}</h3>
+            <h3 className="text-md font-semibold text-white">{product.name}</h3>
             <span className="text-sm text-gray-400">{product.date}</span>
           </div>
 
@@ -40,7 +40,7 @@ export function RemixedProductsList({ products }: RemixedProductsListProps) {
                   className="mr-2 mb-2 h-5 w-5 text-white"
                 />
                 <div className="flex flex-col">
-                  <span className="text-lg font-medium text-white">
+                  <span className="text-lg font-semibold text-white">
                     {product.timeRemixed}
                   </span>
                   <span className="text-xs text-gray-400">Time Remixed</span>
@@ -58,7 +58,7 @@ export function RemixedProductsList({ products }: RemixedProductsListProps) {
                   className="mr-2 mb-2 h-5 w-5 text-white"
                 />
                 <div className="flex flex-col">
-                  <span className="text-lg font-medium text-white">
+                  <span className="text-lg font-semibold text-white">
                     {product.downloads}
                   </span>
                   <span className="text-xs text-gray-400">Download</span>
@@ -76,7 +76,7 @@ export function RemixedProductsList({ products }: RemixedProductsListProps) {
                   className="mr-2 mb-2 h-4 w-5 text-white"
                 />
                 <div className="flex flex-col">
-                  <span className="text-lg font-medium text-white">
+                  <span className="text-lg font-semibold text-white">
                     {product.views}
                   </span>
                   <span className="text-xs text-gray-400">Views</span>

@@ -41,7 +41,7 @@ export function StatisticsCard({
         {/* Statistics information */}
         <div className="">
           <div className="text-3xl font-bold">{value}</div>
-          <div className="text-xs text-muted-foreground">{description}</div>
+          <div className="text-sm font-semibold text-muted-foreground">{description}</div>
         </div>
       </div>
     </div>

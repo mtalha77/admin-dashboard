@@ -101,6 +101,7 @@ export function BarChart({ data, className }: OcoinBarChartProps) {
           margin={{ top: 30, right: 20, left: 20, bottom: 5 }}
           barGap={10}
           barCategoryGap={10}
+          className="text-[#FEFEFF] font-semibold"
         >
           <CartesianGrid vertical={false} horizontal={true} opacity={0.1} />
           <XAxis

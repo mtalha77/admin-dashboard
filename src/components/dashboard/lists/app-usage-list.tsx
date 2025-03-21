@@ -18,7 +18,7 @@ export function AppUsageList({ apps }: AppUsageListProps) {
           </Avatar>
 
           <div className="flex flex-col mr-auto">
-            <h3 className="text-md font-medium text-white">{app.name}</h3>
+            <h3 className="text-md font-semibold text-white">{app.name}</h3>
             <span className="text-sm text-gray-400">{app.date}</span>
           </div>
 
@@ -33,7 +33,7 @@ export function AppUsageList({ apps }: AppUsageListProps) {
                   className="mr-2 mb-2 h-4 w-5 text-white"
                 />
                 <div className="flex flex-col">
-                  <span className="text-lg font-medium text-white">
+                  <span className="text-lg font-semibold text-white">
                     {app.timeUsed}
                   </span>
                   <span className="text-xs text-gray-400">Time Used</span>

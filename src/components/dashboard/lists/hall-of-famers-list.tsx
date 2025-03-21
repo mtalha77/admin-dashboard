@@ -48,7 +48,7 @@ export function HallOfFamersList({
                   hoveredId={remixer.id}
                 />
                 <div>
-                  <p className="text-sm font-medium leading-none text-white">
+                  <p className="font-semibold leading-none text-white">
                     {remixer.username}
                   </p>
                   <p className="text-xs text-muted-foreground">

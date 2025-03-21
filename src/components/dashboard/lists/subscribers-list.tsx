@@ -86,7 +86,7 @@ export function SubscribersList({ title, subscribers }: SubscribersListProps) {
                 />
 
                 <div>
-                  <p className="text-sm font-medium leading-none text-white">
+                  <p className="font-semibold leading-none text-white">
                     {subscriber.username}
                   </p>
                   <p className="text-xs text-muted-foreground">
@@ -114,7 +114,7 @@ export function SubscribersList({ title, subscribers }: SubscribersListProps) {
                       height={16}
                       className="text-white"
                     />
-                    <span className="text-sm font-medium text-white">
+                    <span className="text-sm font-bold text-white">
                       {subscriber.points}
                     </span>
                   </div>

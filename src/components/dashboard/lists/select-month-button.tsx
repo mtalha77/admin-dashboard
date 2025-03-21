@@ -29,7 +29,7 @@ export const SelectMonthButton = ({
   return (
     <Button
       variant="outline"
-      className={`relative flex items-center justify-between gap-4 h-12 px-6 py-4 cursor-pointer !bg-gray-800/40 border border-gray-700 text-white rounded-lg ${className}`}
+      className={`relative flex items-center justify-between gap-4 h-12 px-6 py-4 cursor-pointer !bg-gray-800/40 border border-gray-700 text-white rounded-xl ${className}`}
       style={{
         backdropFilter: "blur(8.4px)",
         boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
@@ -46,18 +46,18 @@ export const SelectMonthButton = ({
       />
 
       {/* Label */}
-      <span className="font-medium">{label}</span>
+      <span className="font-semibold">{label}</span>
 
       <ChevronDown className="w-6 h-6 text-white" />
 
       {/* Gradient Border */}
       <div
-        className="absolute inset-0 rounded-lg"
+        className="absolute inset-0 rounded-xl"
         style={{
           padding: "1px",
           background:
             "linear-gradient(90deg, #FF4AE7 0%, #85A7F3 50%, #83A8F3 100%)",
-          borderRadius: "4px",
+          borderRadius: "0.75rem",
           zIndex: -1,
           mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           maskComposite: "exclude",
