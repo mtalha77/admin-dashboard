@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,9 +33,6 @@ export function UserNav() {
           {/* User avatar with absolute positioning for overlap effect */}
           <Avatar className="absolute right-[-30] md:right-[-20] h-24 w-24">
             <AvatarImage src="/avatars/user-avatar.png" alt="Admin User" />
-            <AvatarFallback className="bg-[#4c2a85] text-white">
-              AU
-            </AvatarFallback>
           </Avatar>
         </div>
       </DropdownMenuTrigger>
