@@ -24,7 +24,7 @@ interface HeaderProps {
  * @param {boolean} props.isCollapsed - Whether the sidebar is collapsed
  * @returns {React.JSX.Element} The rendered header
  */
-export function Header({ onToggleSidebar, isCollapsed }: HeaderProps) {
+export function Header({ onToggleSidebar }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 bg-background pb-2">
       <div className="flex h-16 items-center justify-between px-4">
@@ -35,7 +35,7 @@ export function Header({ onToggleSidebar, isCollapsed }: HeaderProps) {
             variant="ghost"
             size="icon"
             onClick={onToggleSidebar}
-            className={`mr-2 ${isCollapsed ? "md:flex" : "md:hidden"}`}
+            className="mr-2 md:hidden"
           >
             <span className="sr-only">Toggle sidebar</span>
             <MenuIcon className="h-5 w-5" />

@@ -19,13 +19,36 @@ export function DashboardLayout({ children }: React.PropsWithChildren) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   /**
    * Toggles the sidebar between collapsed and expanded states
    */
   const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
+    // On mobile devices, toggle the mobile sidebar
+    if (window.innerWidth < 768) {
+      setMobileOpen(!mobileOpen);
+    } else {
+      // On desktop, use the existing collapse behavior
+      setIsCollapsed(!isCollapsed);
+    }
   };
+
+  /**
+   * Effect to handle resize events to reset mobile sidebar when resizing to desktop
+   */
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   /**
    * Effect to handle scroll events and component mounting
@@ -56,12 +79,20 @@ export function DashboardLayout({ children }: React.PropsWithChildren) {
       {/* Sidebar container with responsive behavior */}
       <div
         className={cn(
-          "hidden md:block relative w-60 flex-shrink-0 transition-all duration-300 gradient-background",
-          isCollapsed && "w-16"
+          "fixed md:relative z-50 w-60 flex-shrink-0 transition-all duration-300 gradient-background",
+          isCollapsed && "md:w-16",
+          !mobileOpen && "hidden md:block"
         )}
       >
         <Sidebar isCollapsed={isCollapsed} />
       </div>
+      {/* Mobile overlay when sidebar is open */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
       {/* Main content area with header and scrollable content */}
       <div className="flex-1 overflow-auto">
         <Header isCollapsed={isCollapsed} onToggleSidebar={toggleSidebar} />
