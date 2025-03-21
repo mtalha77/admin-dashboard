@@ -47,7 +47,11 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: linear-gradient(
+    180deg,
+    oklch(29.9%, 20.5%, 291.406%) 0%,
+    oklch(15.7%, 18%, 287.461%) 100%
+  );
   --foreground: oklch(0.13 0.028 261.692);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.13 0.028 261.692);
