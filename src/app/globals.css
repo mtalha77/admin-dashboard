@@ -124,7 +124,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Inter", sans-serif !important;
   }
 }
 
@@ -149,4 +148,10 @@
   border-image-slice: 1; /* Ensures the gradient fills the border */
   backdrop-filter: blur(8.4px);
   border-radius: 50%; /* Matches Tailwind's rounded-full */
+}
+
+/* Apply Gilroy font family to all elements */
+body,
+html {
+  font-family: var(--font-gilroy), system-ui, sans-serif !important;
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { gilroy } from "./fonts";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     icon: "/images/logo.png", // Default favicon
     apple: "/images/logo.png", // For Apple devices (180x180)
     shortcut: "/images/logo.png", // Alternative for browsers (32x32)
-  }
+  },
 };
 
 /**
@@ -33,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={gilroy.variable} suppressHydrationWarning>
       <body
         className={`min-h-screen bg-background font-sans antialiased ${inter.variable}`}
       >
