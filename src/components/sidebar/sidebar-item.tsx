@@ -48,7 +48,7 @@ export function SidebarItem({
         "flex items-center gap-2 px-3 py-2 text-sm rounded-md transition-colors",
         // Apply different styles based on active state
         isActive
-          ? "bg-white/10 text-white font-bold border-2 border-white rounded-full"
+          ? "bg-white/10 text-white font-bold border-2 border-white rounded-full px-6"
           : "text-white font-bold transition-all duration-100 hover:ps-4 hover:bg-accent hover:border-1 hover:rounded-full hover:text-accent-foreground",
         // Center items when sidebar is collapsed
         isCollapsed && "justify-center"

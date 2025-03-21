@@ -33,7 +33,7 @@ export function Sidebar({ className, isCollapsed }: SidebarProps) {
       )}
     >
       {/* Logo section at the top */}
-      <div className="py-4">
+      <div className="py-4 ps-10 flex justify-start w-full">
         <SidebarLogo isCollapsed={isCollapsed} />
       </div>
 
